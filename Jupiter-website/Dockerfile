@@ -26,5 +26,4 @@ RUN rm -rf jupiter-main main.zip
 EXPOSE 80
 
 # set the default application that will start when the container start
-ENTRYPOINT ystemctl enable httpd 
-sudo apachectl restart
+ENTRYPOINT ["/usr/sbin/httpd", "-D", "FOREGROUND"]
